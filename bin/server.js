@@ -1,4 +1,4 @@
-const app = require('../src/app')
+const app = require('../src/index')
 const debug = require('debug')('nodestr:server')
 const http = require('http')
 
