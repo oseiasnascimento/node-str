@@ -10,6 +10,22 @@ routes.get('/', (req, res) => {
   })
 })
 
+routes.post('/', (req, res) =>{
+  res.status(201).send(req.body)
+})
+
+routes.put('/:id', (req, res) =>{
+  const id = req.params.id
+  res.status(200).send({
+    id: id,
+    item: req.body
+  })
+})
+
+routes.delete('/', (req, res) =>{
+  res.status(200).send(req.body)
+})
+
 module.exports = routes
 
 //Forma feita por Balta - Carreira Desemvolvedor Back-and
