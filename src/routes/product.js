@@ -1,23 +1,12 @@
 const { Router } = require('express')
-const res = require('express/lib/response')
+const controller = require('../controllers/product-controller')
 
 const routes = Router()
 
-routes.post('/', (req, res) =>{
-  res.status(201).send(req.body)
-})
+routes.post('/', controller.post)
 
-routes.put('/:id', (req, res) =>{
-  const id = req.params.id
-  res.status(200).send({
-    id: id,
-    item: req.body
-  })
-})
+routes.put('/:id', controller.put)
 
-routes.delete('/', (req, res) =>{
-  res.status(200).send(req.body)
-})
-
+routes.delete('/', controller.delete)
 
 module.exports = routes
