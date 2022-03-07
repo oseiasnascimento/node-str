@@ -3,7 +3,7 @@ const { Router } = require('express')
 
 const routes = Router()
 
-routes.get('/', (request, response) => {
+routes.get('/', (req, res) => {
   response.status(200).send({
     title: 'Node Store API',
     version: '0.0.1'
